@@ -14,10 +14,9 @@ class WebsiteController extends AbstractController
     {
         $posts = $postRepository->findAll();
         foreach ($posts as $post){
-
+            echo $post->getTitle() . '<br/>';
         }
-        print_r($posts)
-        
+
         return $this->render('website/index.html.twig', [
             'controller_name' => 'WebsiteController',
         ]);
